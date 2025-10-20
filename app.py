@@ -2,7 +2,7 @@ import stremlit as stremlit
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
 
-st.title("Dhanushya - Market Analyis"):
+st.title("Dhanushya - Market Analyis")
 
 #user imput
 user_imput = st.text_area("Enter your market data / question:")
