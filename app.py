@@ -24,7 +24,8 @@ def main():
         user_question = st.text_input("Ask a question about your CSV: ")
 
         llm = OpenAI(temperature=0)
-        agent = create_agent(llm,user_csv,verbose=True)
+        agent = create_agent(llm,user_csv)
+        agent.verbose = True
    
         if user_question is not None and user_question != "":
            with st.spinner(text="In progress..."):
