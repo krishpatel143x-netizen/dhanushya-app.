@@ -25,15 +25,14 @@ def main():
             OpenAI(temperature=0), csv_file)
         agent.verbose = True
 
-    def main():
-        user_question = st.text_input("Ask a question about your CSV: ")
+def main():
+    user_question = st.text_input("Ask a question about your CSV: ")
 
-        if user_question is not None and user_question != "":
-            with st.spinner(text="In progress..."):
-     
-    st.write(agent.invoke(user_question))
+    if user_question is not None and user_question != "":
+        with st.spinner(text="In progress..."):
+            st.write(agent.invoke(user_question))
 
 
-    if __name__ == "__main__":
+ if __name__ == "__main__":
         main()
         
