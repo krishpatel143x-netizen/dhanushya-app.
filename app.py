@@ -30,9 +30,10 @@ def main():
 
         if user_question is not None and user_question != "":
             with st.spinner(text="In progress..."):
-                st.write(agent.invoke(user_question))
+     
+    st.write(agent.invoke(user_question))
 
 
-if __name__ == "__main__":
-    main()
+    if __name__ == "__main__":
+        main()
         
