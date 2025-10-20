@@ -25,6 +25,7 @@ def main():
             OpenAI(temperature=0), csv_file)
         agent.verbose = True
 
+    def main():
         user_question = st.text_input("Ask a question about your CSV: ")
 
         if user_question is not None and user_question != "":
@@ -33,5 +34,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
         
