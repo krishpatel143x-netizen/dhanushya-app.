@@ -7,7 +7,7 @@ st.title("Dhanushya - Market Analyis")
 #user imput
 user_imput = st.text_area("Enter your market data / question:")
 
-if st.button("Analyze")
+if st.button("Analyze"):
     if user_imput:
         llm = ChatOpenAI(openai_api_keys="YOUR_OPENAI_API_KEY", temprerature=0)
         template = ChatPromptTemplate.from_template("Analyze this data: (data)")
