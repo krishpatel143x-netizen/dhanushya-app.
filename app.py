@@ -18,19 +18,18 @@ def main():
     st.set_page_config(page_title="Ask your CSV")
     st.header("Ask your CSV 📈")
 
-    csv_file = st.file_uploader("Upload a CSV file", type="csv")
-    if csv_file is not None:
+    user_csv = st.file_uploader("Upload a CSV file", type="csv")
 
-        agent = create_agent(
-            OpenAI(temperature=0), csv_file)
-        agent.verbose = True
+    if user_csv is not None:
+        user_question = st.text_input("Ask a question about your CSV: ")
 
-def main():
-    user_question = st.text_input("Ask a question about your CSV: ")
-
-    if user_question is not None and user_question != "":
-        with st.spinner(text="In progress..."):
-             st.write(agent.invoke(user_question))
+        llm = OpenAI(temperature=0)
+        agent = create_agent(llm,user_csv,verbose=True)
+   
+        if user_question is not None and user_question != "":
+           with st.spinner(text="In progress..."):
+           response = agent.run(user_question)
+           st.write(response)
 
 
 if __name__ == "__main__":
