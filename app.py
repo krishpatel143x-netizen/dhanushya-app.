@@ -1,5 +1,5 @@
 from langchain.agents import create_agent
-from langchain.llms import OpenAI
+from langchain_openai import OpenAI
 from dotenv import load_dotenv
 import os
 import streamlit as st
