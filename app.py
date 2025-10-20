@@ -22,7 +22,8 @@ def main():
     if csv_file is not None:
 
         agent = create_agent(
-            OpenAI(temperature=0), csv_file, verbose=True)
+            OpenAI(temperature=0), csv_file)
+        agent.verbose = True
 
         user_question = st.text_input("Ask a question about your CSV: ")
 
