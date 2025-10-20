@@ -29,7 +29,7 @@ def main():
    
         if user_question is not None and user_question != "":
            with st.spinner(text="In progress..."):
-               response = agent.run(user_question)
+               response = agent.invoke(user_question)
                st.write(response)
 
 
