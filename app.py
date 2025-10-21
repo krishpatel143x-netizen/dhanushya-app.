@@ -19,7 +19,7 @@ def main():
     st.header("Ask your CSV 📈")
 
     csv_file = st.file_uploader("Upload a CSV file", type="csv")
-    if user_csv is not None:
+    if csv_file is not None:
 
      
         agent = create_agent(
